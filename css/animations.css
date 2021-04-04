@@ -1,0 +1,73 @@
+
+
+@keyframes optionsPanelAnimation{
+    0%{
+        transform:  scale(0) ;
+        left: 600px;
+        top: 250px;
+        opacity: 0;
+        }
+        40% {
+            opacity: 0;
+        }
+    100%{
+        transform:  scale(1);
+        left: 100px;
+        top: 60px;
+        opacity: 1;
+        }
+}
+
+#options-info-panel{
+    animation: optionsPanelAnimation 0.5s forwards 0s ease-in-out;
+    animation-delay: .380s;
+}
+
+@keyframes callerPanelAnimation{
+    0%{
+        transform:  scale(0) ;
+        right: 600px;
+        top: 250px;
+        opacity: 0;
+        }
+        40% {
+            opacity: 0;
+        }
+    100%{
+        transform:  scale(1);
+        right: 100px;
+        top: 60px;
+        opacity: 1;
+        }
+}
+
+
+#caller-info-panel{
+    
+    animation: callerPanelAnimation 0.5s forwards 0s ease-in-out;
+    animation-delay: .58s;
+}
+
+
+
+@keyframes incomingCallPanelAnimation {
+    0%{
+        transform:  scale(0) ;
+        top: 50px;
+        opacity: 0;
+        }
+    100%{
+        transform:  scale(1);
+        top: -20px;
+        opacity: 1;
+        }
+}
+
+
+#incoming-call{
+    animation: incomingCallPanelAnimation 0.3s forwards 0s ease-in-out;
+    animation-delay: .15s;
+
+}
+
+
