@@ -1,5 +1,4 @@
 
-
 @keyframes optionsPanelAnimation{
     0%{
         transform:  scale(0) ;
@@ -19,7 +18,8 @@
 }
 
 #options-info-panel{
-    animation: optionsPanelAnimation 0.5s forwards 0s ease-in-out;
+    animation: optionsPanelAnimation 0.5s forwards 0s;
+    animation-timing-function: cubic-bezier(0.87, 0, 0.13, 1);
     animation-delay: .380s;
 }
 
@@ -41,14 +41,12 @@
         }
 }
 
-
 #caller-info-panel{
     
-    animation: callerPanelAnimation 0.5s forwards 0s ease-in-out;
+    animation: callerPanelAnimation 0.5s forwards 0s;
+    animation-timing-function: cubic-bezier(0.87, 0, 0.13, 1);
     animation-delay: .58s;
 }
-
-
 
 @keyframes incomingCallPanelAnimation {
     0%{
@@ -63,11 +61,153 @@
         }
 }
 
-
 #incoming-call{
-    animation: incomingCallPanelAnimation 0.3s forwards 0s ease-in-out;
+    animation: incomingCallPanelAnimation 0.7s forwards 0s;
+    animation-timing-function: cubic-bezier(0.87, 0, 0.13, 1);
     animation-delay: .15s;
 
 }
 
+#caller-info-bg {
+    animation: bgAniamtion 0.7s forwards 0s;
+    animation-timing-function: cubic-bezier(0.87, 0, 0.13, 1);
+    animation-delay: .90s;
+}
 
+#caller-photo{
+    animation: fadeInScale 0.7s forwards 0s;
+    animation-timing-function: cubic-bezier(0.87, 0, 0.13, 1);
+    animation-delay: 1.3s;
+}
+
+#caller-name{
+    animation: fadeIn2 0.7s forwards 0s;
+    animation-timing-function: cubic-bezier(0.87, 0, 0.13, 1);
+    animation-delay: 1.7s;
+}
+#caller-title{
+    animation: fadeIn2 0.7s forwards 0s;
+    animation-timing-function: cubic-bezier(0.87, 0, 0.13, 1);
+    animation-delay: 1.99s;
+}
+
+
+#call-assist #options-info-bg {
+    animation: bgAniamtion 0.7s forwards 0s;
+    animation-timing-function: cubic-bezier(0.87, 0, 0.13, 1);
+    animation-delay: .90s;
+}
+
+#call-assist  h2, #call-assist  #siri{
+    animation: fadeIn2 0.3s forwards 0s;
+    animation-timing-function: cubic-bezier(0.87, 0, 0.13, 1);
+    animation-delay: 1.40s;
+}
+
+
+#call-assist-info #options-info-bg {
+    animation: bgAniamtion 0.7s forwards 0s;
+    animation-timing-function: cubic-bezier(0.87, 0, 0.13, 1);
+    animation-delay: 1.90s;
+}
+
+#call-assist-info  h3{
+    animation: fadeIn2 0.3s forwards 0s;
+    animation-timing-function: cubic-bezier(0.87, 0, 0.13, 1);
+    animation-delay: 2.90s;
+}
+
+#call-assist-info  h4{
+    animation: fadeIn2 0.3s forwards 0s;
+    animation-timing-function: cubic-bezier(0.87, 0, 0.13, 1);
+    animation-delay: 3.90s;
+}
+
+
+@keyframes bgAniamtion{
+    0%{
+        width: 0;
+        left: 50%;
+        opacity: 0;
+        }
+    100%{
+        width: 100%;
+        left: 0;
+        opacity: 1;
+        }
+}
+
+@keyframes fadeInScale{
+    0%{
+        transform:  scale(0) ;
+        opacity: 1;
+        }
+    100%{
+        transform:  scale(1);
+        opacity: 1;
+        }
+}
+
+@keyframes fadeIn2{
+    0%{
+        opacity: 0;
+        }
+    100%{
+        opacity: 1;
+        }
+}
+
+@keyframes fadeIn{
+    0%{
+        opacity: .5;
+        }
+    50%{
+        opacity: .75;
+        }
+    100%{
+        opacity: .5;
+        }
+}
+
+#number-bg {
+    animation: fadeIn 1.9s infinite 1s ease-in-out;
+}
+
+#caller-ring {
+    transform: perspective(1200px) rotateX(80deg) rotateY(0deg) rotateZ(0deg)
+    translateX(0px) translateY(300px) translateZ(20px) ;
+    animation: fadeIn2 0.3s forwards 0s;
+    animation-timing-function: cubic-bezier(0.87, 0, 0.13, 1);
+    animation-delay: 1.3s;
+}
+
+#caller-ring img {
+    animation: rotateAnimation 20s infinite 0s linear;
+}
+
+@keyframes rotateAnimation{
+    0%{
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        }
+    100%{
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        }
+}
+
+#caller-photo img{
+    animation: bounce 2s infinite 1s ease-in-out;
+}
+
+@keyframes bounce {
+    0% {
+        transform:   translateY(0px);
+    }
+    50% {
+        transform:   translateY(5px);
+    }
+    100% {
+        transform:  translateY(0px);
+    }
+}
