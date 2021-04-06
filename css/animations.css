@@ -51,12 +51,12 @@
 @keyframes incomingCallPanelAnimation {
     0%{
         transform:  scale(0) ;
-        top: 50px;
+        top: 400px;
         opacity: 0;
         }
     100%{
         transform:  scale(1);
-        top: -20px;
+        top: 230px;
         opacity: 1;
         }
 }
@@ -148,6 +148,18 @@
         }
 }
 
+@keyframes fadeIn3{
+    0%{
+        opacity: 0;
+        }
+    50%{
+        opacity: .5;
+        }
+    100%{
+        opacity: 0;
+        }
+}
+
 @keyframes fadeIn2{
     0%{
         opacity: 0;
@@ -169,8 +181,24 @@
         }
 }
 
+@keyframes colorChange{
+    0%{
+        color: white
+        }
+    50%{
+        color: red
+        }
+    100%{
+        color: white
+        }
+}
+/*
+#number {
+    animation: colorChange 1.3s infinite 1s ease-in-out;
+}
+*/
 #number-bg {
-    animation: fadeIn 1.9s infinite 1s ease-in-out;
+    animation: fadeIn3 1.3s infinite 1s ease-in-out;
 }
 
 #caller-ring {
