@@ -1,6 +1,5 @@
 body {
   margin: auto;
-  background-color: #4e4e4e;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -20,24 +19,26 @@ h4 {
 #bg-img {
   position: absolute;
   width: 100%;
-  top: 0px;
+  top: -50px;
   z-index: -10;
-  left: 5px;
+  left: 0px;
 }
 
 #app {
   margin: auto;
   width: 970px;
-  height: 800px;
-  border: 1px solid black;
+  height: 565px;
+  border: 1px solid white;
   position: relative;
+  overflow: hidden;
+  margin-top: -20px;
 }
 
 #incoming-caller-ring {
   width: 150px;
   margin: auto;
-  opacity: 0;
-  margin-top: 135px;
+  opacity: 1;
+  margin-top: 130px;
 }
 
 #incoming-caller-ring img {
@@ -62,45 +63,45 @@ h4 {
   border-radius: 30px;
 }
 
-#incoming-call {
+.bounce {
+  margin-top: -140px;
+}
+
+.bounce #incoming-call {
   width: 150px;
   height: 150px;
-  /*
-    padding: 10px 0px;
-    */
-  border-radius: 80px;
   position: relative;
-  /*
-    border: 2px solid blue;
-    */
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  opacity: 1;
+  border-radius: 80px;
   border-top: 2px solid white;
   border-bottom: 1px solid white;
   margin: auto;
-  margin-top: -80px;
-  -webkit-transform: scale(0);
-          transform: scale(0);
   text-align: center;
   color: white;
-  background: #020024;
-  background: linear-gradient(320deg, rgba(2, 0, 36, 0.2) 0%, rgba(9, 9, 121, 0.2) 35%, rgba(0, 212, 255, 0.2) 100%);
 }
 
-#incoming-call #text {
+.bounce #incoming-call #text {
+  opacity: 1;
+  z-index: 100;
   font-size: 16px;
   font-weight: 700;
   padding-top: 50px;
   padding-bottom: 5px;
 }
 
-#incoming-call #number-container #number {
-  z-index: 2;
-  font-size: 16px;
+.bounce #incoming-call #number-container #number {
+  opacity: 1;
+  z-index: 100;
+  font-size: 1em;
+  font-weight: 700;
   position: relative;
   top: 10px;
   text-shadow: 2px 2px 2px rgba(0, 0, 10, 0.5);
 }
 
-#incoming-call #number-container #number-bg {
+.bounce #incoming-call #number-container #number-bg {
   width: 75%;
   height: 40px;
   position: relative;
@@ -110,6 +111,15 @@ h4 {
   border-radius: 5px;
   text-shadow: 2px 2px 2px rgba(206, 89, 55, 0.75);
   display: none;
+}
+
+.bounce #incoming-call #siri-bg {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -10;
+  opacity: .6;
 }
 
 #caller-info-panel {
@@ -154,11 +164,12 @@ h4 {
   opacity: 0;
   padding: 10px;
   font-weight: 600;
-  margin-top: 10px;
+  margin-top: -15px;
 }
 
 #caller-info-panel #caller-title {
   opacity: 0;
+  padding-bottom: 10px;
 }
 
 #caller-info-panel #caller-title h3 {
